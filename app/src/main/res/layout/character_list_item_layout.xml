@@ -37,7 +37,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/Game_Name_TextView"
+            android:id="@+id/Campaign_Name_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"

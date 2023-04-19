@@ -19,7 +19,8 @@
             android:id="@+id/Exit_Button"
             android:layout_width="200dp"
             android:layout_height="60dp"
-            android:layout_gravity="bottom|start"
+            android:layout_gravity="start|top"
+            android:layout_marginTop="680dp"
             android:backgroundTint="@color/accent_button_colour"
             android:text="@string/exit_button_text"
             tools:ignore="TextContrastCheck" />
@@ -28,9 +29,10 @@
             android:id="@+id/Char_Save_Button"
             android:layout_width="200dp"
             android:layout_height="60dp"
-            android:layout_gravity="bottom|end"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="680dp"
             android:backgroundTint="@color/accent_button_colour"
-            android:text="@string/create_character_text"
+            android:text="@string/new_char_save_button_text"
             tools:ignore="TextContrastCheck" />
 
         <TextView
@@ -38,10 +40,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:text="@string/player_name"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="50sp"
             tools:ignore="TextContrastCheck" />
 
@@ -50,24 +51,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="80dp"
             android:autofillHints=""
             android:ems="10"
             android:inputType="textPersonName"
             android:text="@string/player_name_placeholder"
             android:textAlignment="center"
             android:textSize="30sp"
-            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/Character_Name_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="150dp"
             android:text="@string/character_name"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="50sp"
             tools:ignore="TextContrastCheck" />
 
@@ -83,17 +83,16 @@
             android:text="@string/character_name_placeholder"
             android:textAlignment="center"
             android:textSize="30sp"
-            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
         <TextView
-            android:id="@+id/Game_Name_TextView"
+            android:id="@+id/Campaign_Name_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
-            android:layout_marginTop="290dp"
+            android:layout_marginTop="280dp"
             android:text="@string/game_name"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="50sp"
             tools:ignore="TextContrastCheck" />
 
@@ -109,17 +108,16 @@
             android:text="@string/game_name_placeholder"
             android:textAlignment="center"
             android:textSize="30sp"
-            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/Palico_Name_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
-            android:layout_marginTop="420dp"
+            android:layout_marginTop="410dp"
             android:text="@string/palico_name"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="50sp"
             tools:ignore="TextContrastCheck" />
 
@@ -135,26 +133,25 @@
             android:text="@string/palico_name_placeholder"
             android:textAlignment="center"
             android:textSize="30sp"
-            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/Weapon_Type_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
-            android:layout_marginTop="550dp"
+            android:layout_marginTop="540dp"
             android:text="@string/weapon_type"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="50sp"
             tools:ignore="TextContrastCheck" />
 
         <Spinner
             android:id="@+id/Weapon_Type_Spinner"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="48dp"
             android:layout_gravity="center|top"
-            android:layout_marginTop="630dp"
+            android:layout_marginTop="610dp"
             android:entries="@array/weapon_types"
             android:paddingStart="25dp"
             android:paddingEnd="25dp"

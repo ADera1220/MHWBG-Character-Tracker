@@ -19,4 +19,7 @@
     <string name="quests_button_content_description">Quest List</string>
     <string name="day_number_label">Day #</string>
     <string name="potions_counter_label">Potions</string>
+    <string name="new_char_save_button_text">Create</string>
+    <string name="inventory_save_button_text">Save</string>
+    <string name="character_name_label"></string>
 </resources>

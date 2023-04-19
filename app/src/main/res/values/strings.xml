@@ -1,14 +1,13 @@
 <resources>
     <string name="app_name">MHW Board Game Character Sheets</string>
-    <string name="player_name_placeholder">Player Name</string>
-    <string name="character_name_placeholder">Character Name</string>
-    <string name="game_name_placeholder">Game Name</string>
-    <string name="palico_name_placeholder">Palico Name</string>
+    <string name="player_name_placeholder"></string>
+    <string name="character_name_placeholder"></string>
+    <string name="game_name_placeholder"></string>
+    <string name="palico_name_placeholder"></string>
     <string name="weapon_type_placeholder">Weapon Type</string>
-    <string name="weapon_armor_name_placeholder">Weapon/Armor Name</string>
-    <string name="material_name_placeholder">Material Name</string>
+    <string name="weapon_armor_name_placeholder"></string>
+    <string name="material_name_placeholder"></string>
     <string name="material_quantity">0</string>
-    <string name="character_name_label">Character Name</string>
 
     <string-array name="potion_number">
         <item>0</item>
@@ -105,10 +104,5 @@
         <item>1</item>
         <item>1</item>
         <item>1</item>
-
     </string-array>
-
-
-
-
 </resources>

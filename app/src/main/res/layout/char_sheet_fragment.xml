@@ -10,14 +10,14 @@
 
     <FrameLayout
         android:id="@+id/Top_Row_FrameLayout"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/char_sheet_frame_width"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002">
+        app:layout_constraintVertical_bias="0.0">
 
         <Spinner
             android:id="@+id/Potions_Spinner"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
             android:fontFamily="monospace"
-            android:text="@string/character_name_label"
+            android:text="@string/character_name"
             android:textSize="20sp" />
 
         <TextView
@@ -80,7 +80,7 @@
 
     <FrameLayout
         android:id="@+id/Second_Row_FrameLaayout"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/char_sheet_frame_width"
         android:layout_height="@dimen/char_sheet_row_height"
         android:layout_marginTop="75dp"
         android:layout_marginBottom="525dp"
@@ -93,26 +93,26 @@
             android:id="@+id/Weapon_Button"
             android:layout_width="@dimen/char_sheet_image_button_width"
             android:layout_height="@dimen/char_sheet_image_button_height"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:layout_marginEnd="100dp"
             android:contentDescription="@string/weapon_button_content_description"
             app:srcCompat="@drawable/ic_launcher_foreground"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
         <ImageButton
             android:id="@+id/Helm_Button"
             android:layout_width="@dimen/char_sheet_image_button_width"
             android:layout_height="@dimen/char_sheet_image_button_height"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="100dp"
             android:contentDescription="@string/helm_button_content_description"
             app:srcCompat="@drawable/ic_launcher_foreground"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/Third_Row_FrameLayout"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/char_sheet_frame_width"
         android:layout_height="@dimen/char_sheet_row_height"
         android:layout_marginTop="225dp"
         android:layout_marginBottom="375dp"
@@ -125,26 +125,26 @@
             android:id="@+id/Chest_Button"
             android:layout_width="@dimen/char_sheet_image_button_width"
             android:layout_height="@dimen/char_sheet_image_button_height"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:layout_marginEnd="100dp"
             android:contentDescription="@string/chest_button_content_description"
             app:srcCompat="@drawable/ic_launcher_foreground"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
         <ImageButton
             android:id="@+id/Legs_Button"
             android:layout_width="@dimen/char_sheet_image_button_width"
             android:layout_height="@dimen/char_sheet_image_button_height"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="100dp"
             android:contentDescription="@string/legs_button_content_description"
             app:srcCompat="@drawable/ic_launcher_foreground"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/Fourth_Row_FrameLayout"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/char_sheet_frame_width"
         android:layout_height="@dimen/char_sheet_row_height"
         android:layout_marginTop="375dp"
         android:layout_marginBottom="225dp"
@@ -157,26 +157,26 @@
             android:id="@+id/Bone_Ore_Hide_Other_Button"
             android:layout_width="@dimen/char_sheet_image_button_width"
             android:layout_height="@dimen/char_sheet_image_button_height"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:layout_marginEnd="100dp"
             android:contentDescription="@string/materials_button_content_description"
             app:srcCompat="@drawable/ic_launcher_foreground"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
         <ImageButton
             android:id="@+id/Monster_Parts_Button"
             android:layout_width="@dimen/char_sheet_image_button_width"
             android:layout_height="@dimen/char_sheet_image_button_height"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="100dp"
             android:contentDescription="@string/monster_parts_button_content_description"
             app:srcCompat="@drawable/ic_launcher_foreground"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/Fifth_Row_FrameLayout"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/char_sheet_frame_width"
         android:layout_height="@dimen/char_sheet_row_height"
         android:layout_marginTop="525dp"
         android:layout_marginBottom="75dp"
@@ -197,12 +197,12 @@
 
     <FrameLayout
         android:id="@+id/Bottom_Row_FrameLayout"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/char_sheet_frame_width"
         android:layout_height="100dp"
         android:layout_marginTop="675dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
@@ -212,6 +212,7 @@
             android:layout_width="200dp"
             android:layout_height="@dimen/details_page_button_height"
             android:layout_gravity="center|end"
+            android:layout_marginEnd="45dp"
             android:backgroundTint="@color/regular_button_colour"
             android:text="@string/save_button_text"
             android:textColor="@color/white" />
@@ -221,6 +222,7 @@
             android:layout_width="200dp"
             android:layout_height="@dimen/details_page_button_height"
             android:layout_gravity="center|start"
+            android:layout_marginStart="45dp"
             android:backgroundTint="@color/regular_button_colour"
             android:text="@string/exit_button_text"
             android:textColor="@color/white" />

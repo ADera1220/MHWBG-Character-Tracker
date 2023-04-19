@@ -22,7 +22,7 @@
         android:layout_width="@dimen/list_item_width"
         android:layout_height="@dimen/task_button_height"
         android:backgroundTint="@color/accent_button_colour"
-        android:text="@string/create_character_text"
+        android:text="@string/inventory_save_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
