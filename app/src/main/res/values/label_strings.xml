@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="minus_button">-</string>
+    <string name="plus_button">+</string>
+    <string name="player_name">Player Name</string>
+    <string name="character_name">Character Name</string>
+    <string name="game_name">Game Name</string>
+    <string name="palico_name">Palico Name</string>
+    <string name="weapon_type">Weapon Type</string>
+    <string name="save_button_text">Save</string>
+    <string name="exit_button_text">Exit</string>
+    <string name="create_character_text">Create New Character</string>
+    <string name="weapon_button_content_description">Weapon List</string>
+    <string name="helm_button_content_description">Helm List</string>
+    <string name="chest_button_content_description">Chest List</string>
+    <string name="legs_button_content_description">legs List</string>
+    <string name="materials_button_content_description">Materials List</string>
+    <string name="monster_parts_button_content_description">Monster Parts List</string>
+    <string name="quests_button_content_description">Quest List</string>
+    <string name="day_number_label">Day #</string>
+    <string name="potions_counter_label">Potions</string>
+</resources>
