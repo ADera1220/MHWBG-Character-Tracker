@@ -73,7 +73,7 @@ class CharSheetFragment: Fragment() {
                 .supportFragmentManager
                 .commit {
                     (activity as MainActivity).listType = "materials"
-                    replace<InventoryListFragment>(R.id.Fragment_Container)
+                    replace<MaterialListFragment>(R.id.Fragment_Container)
                 }
         }
 
@@ -81,8 +81,8 @@ class CharSheetFragment: Fragment() {
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {
-                    (activity as MainActivity).listType = "monster"
-                    replace<InventoryListFragment>(R.id.Fragment_Container)
+                    (activity as MainActivity).listType = "monsters"
+                    replace<MaterialListFragment>(R.id.Fragment_Container)
                 }
         }
 
@@ -91,7 +91,7 @@ class CharSheetFragment: Fragment() {
                 .supportFragmentManager
                 .commit {
                     (activity as MainActivity).listType = "quests"
-                    replace<InventoryListFragment>(R.id.Fragment_Container)
+                    replace<MaterialListFragment>(R.id.Fragment_Container)
                 }
         }
 

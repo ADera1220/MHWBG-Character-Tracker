@@ -36,7 +36,7 @@ class MaterialAdapter (private val dataSet: Map<String, Int>):
         var quantity: List<Int> = dataSet.values.toList()
 
         holder.itemName.text = names[position]
-        holder.quantity.setText(quantity[position])
+        holder.quantity.setText(quantity[position].toString())
     }
 
     override fun getItemCount(): Int {

@@ -2,9 +2,11 @@ package ca.adera1220.mhwbgcharactertracker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlin.reflect.typeOf
 
 class MainActivity : AppCompatActivity() {
 
@@ -52,42 +54,62 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun popWeaponsList() {
+        inventoryAdapter = InventoryAdapter(charSheetList[0].weaponList, charSheetList[0].weaponType)
+
         weaponList = findViewById(R.id.Inventory_List_RecyclerView)
         weaponList?.layoutManager = LinearLayoutManager(this)
         weaponList?.adapter = inventoryAdapter
     }
 
     fun popHelmList() {
+        inventoryAdapter = InventoryAdapter(charSheetList[0].helmList, null)
+        Log.i("CharSheet", "popHelmList called")
+
         helmList = findViewById(R.id.Inventory_List_RecyclerView)
         helmList?.layoutManager = LinearLayoutManager(this)
         helmList?.adapter = inventoryAdapter
     }
 
     fun popChestList() {
+        inventoryAdapter = InventoryAdapter(charSheetList[0].chestList, null)
+        Log.i("CharSheet", "popChestList called")
+
         chestList = findViewById(R.id.Inventory_List_RecyclerView)
         chestList?.layoutManager = LinearLayoutManager(this)
         chestList?.adapter = inventoryAdapter
     }
 
     fun popLegsList() {
+        inventoryAdapter = InventoryAdapter(charSheetList[0].legsList, null)
+        Log.i("CharSheet", "popLegsList called")
+
         legsList = findViewById(R.id.Inventory_List_RecyclerView)
         legsList?.layoutManager = LinearLayoutManager(this)
         legsList?.adapter = inventoryAdapter
     }
 
     fun popMaterialsList() {
+        materialAdapter = MaterialAdapter(charSheetList[0].materialsList)
+        Log.i("CharSheet", "popMaterialsList called")
+
         materialsList = findViewById(R.id.Material_List_RecyclerView)
         materialsList?.layoutManager = LinearLayoutManager(this)
         materialsList?.adapter = materialAdapter
     }
 
     fun popMonsterPartsList() {
+        materialAdapter = MaterialAdapter(charSheetList[0].monsterPartsList)
+        Log.i("CharSheet", "popMonsterPartsList called")
+
         monsterPartsList = findViewById(R.id.Material_List_RecyclerView)
         monsterPartsList?.layoutManager = LinearLayoutManager(this)
         monsterPartsList?.adapter = materialAdapter
     }
 
     fun popQuestList() {
+        materialAdapter = MaterialAdapter(charSheetList[0].questList)
+        Log.i("CharSheet", "popQuestList called")
+
         questList = findViewById(R.id.Material_List_RecyclerView)
         questList?.layoutManager = LinearLayoutManager(this)
         questList?.adapter = materialAdapter

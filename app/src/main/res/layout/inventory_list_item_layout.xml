@@ -35,7 +35,6 @@
             android:layout_marginEnd="@dimen/checkbox_margin_end"
             android:buttonTint="@color/accent_button_colour"
             android:checked="false"
-            android:enabled="false"
             android:scaleX="@dimen/checkbox_scale_x_y"
             android:scaleY="@dimen/checkbox_scale_x_y" />
 

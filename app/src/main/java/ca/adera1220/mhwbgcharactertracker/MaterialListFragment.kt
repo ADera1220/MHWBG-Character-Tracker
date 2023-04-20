@@ -16,7 +16,7 @@ class MaterialListFragment: Fragment() {
         savedInstance: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.inventory_list_fragment, container, false)
+        return inflater.inflate(R.layout.material_list_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -28,9 +28,9 @@ class MaterialListFragment: Fragment() {
             "quests" -> (activity as MainActivity).popQuestList()
         }
 
-        var inventorySaveButton: View? = getView()?.findViewById(R.id.Inventory_Save_Button)
+        var materialSaveButton: View? = getView()?.findViewById(R.id.Material_Save_Button)
 
-        inventorySaveButton?.setOnClickListener {
+        materialSaveButton?.setOnClickListener {
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {
