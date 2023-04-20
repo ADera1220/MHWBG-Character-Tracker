@@ -21,9 +21,10 @@ class CharListFragment: Fragment() {
         return inflater.inflate(R.layout.char_list_fragment, container, false)
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as MainActivity).popCharList()
 
         var createNewCharacterButton: View? = getView()?.findViewById(R.id.Character_Create_Button)
 

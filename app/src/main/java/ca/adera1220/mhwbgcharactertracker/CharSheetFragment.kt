@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import kotlin.random.Random
 
 class CharSheetFragment: Fragment() {
 
@@ -35,6 +36,7 @@ class CharSheetFragment: Fragment() {
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {
+                    (activity as MainActivity).listType = "weapon"
                     replace<InventoryListFragment>(R.id.Fragment_Container)
                 }
         }
@@ -43,6 +45,7 @@ class CharSheetFragment: Fragment() {
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {
+                    (activity as MainActivity).listType = "helm"
                     replace<InventoryListFragment>(R.id.Fragment_Container)
                 }
         }
@@ -51,6 +54,7 @@ class CharSheetFragment: Fragment() {
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {
+                    (activity as MainActivity).listType = "chest"
                     replace<InventoryListFragment>(R.id.Fragment_Container)
                 }
         }
@@ -59,6 +63,7 @@ class CharSheetFragment: Fragment() {
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {
+                    (activity as MainActivity).listType = "legs"
                     replace<InventoryListFragment>(R.id.Fragment_Container)
                 }
         }
@@ -67,6 +72,7 @@ class CharSheetFragment: Fragment() {
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {
+                    (activity as MainActivity).listType = "materials"
                     replace<InventoryListFragment>(R.id.Fragment_Container)
                 }
         }
@@ -75,6 +81,7 @@ class CharSheetFragment: Fragment() {
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {
+                    (activity as MainActivity).listType = "monster"
                     replace<InventoryListFragment>(R.id.Fragment_Container)
                 }
         }
@@ -83,6 +90,7 @@ class CharSheetFragment: Fragment() {
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {
+                    (activity as MainActivity).listType = "quests"
                     replace<InventoryListFragment>(R.id.Fragment_Container)
                 }
         }
@@ -91,8 +99,14 @@ class CharSheetFragment: Fragment() {
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {
+                    (activity as MainActivity).listType = ""
                     replace<CharListFragment>(R.id.Fragment_Container)
                 }
         }
+    }
+
+    // Generates a Random ID that has the time of creation and a random 3 digit Int, to ensure they are unique
+    private fun generateID(): String {
+        return "T" + System.currentTimeMillis().toString() + "C" + Random.nextInt(100, 999)
     }
 }

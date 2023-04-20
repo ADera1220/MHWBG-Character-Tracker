@@ -7,7 +7,7 @@
     android:backgroundTintMode="src_atop">
 
     <FrameLayout
-        android:id="@+id/List_Item_Frame_Layout"
+        android:id="@+id/Inventory_List_Item_Frame_Layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_item_height"
         android:background="@drawable/layout_border_unchecked"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/Weapon_Armor_Name_TextView"
+            android:id="@+id/item_Name_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
@@ -27,7 +27,7 @@
             android:textSize="@dimen/task_name_text_size" />
 
         <CheckBox
-            android:id="@+id/Task_Completed_CheckBox"
+            android:id="@+id/In_Inventory_CheckBox"
             android:layout_width="@dimen/checkbox_dimen"
             android:layout_height="@dimen/checkbox_dimen"
             android:layout_gravity="end"

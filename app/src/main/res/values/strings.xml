@@ -97,12 +97,4 @@
         <item>Sword &amp; Shield</item>
     </string-array>
 
-<!--    Bow Names-->
-    <string-array name="bow_names">
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-        <item>1</item>
-    </string-array>
 </resources>

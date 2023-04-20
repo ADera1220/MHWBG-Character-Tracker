@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 
-class CharSheetAdapter(private val dataSet: List<CharSheet>) {
+class CharSheetAdapter(private val dataSet: List<CharSheet>):
     RecyclerView.Adapter<CharSheetAdapter.ViewHolder>() {
 
         var onCharSheetClick: ((CharSheet, position: Int) -> Unit)? = null
@@ -21,7 +21,7 @@ class CharSheetAdapter(private val dataSet: List<CharSheet>) {
             val campaignName: TextView
 
             init {
-                frame = view.findViewById(R.id.List_Item_Frame_Layout)
+                frame = view.findViewById(R.id.Character_List_Item_Frame_Layout)
                 playerName = view.findViewById(R.id.Player_Name_TextView)
                 charName = view.findViewById(R.id.Character_Name_TextView)
                 weaponType = view.findViewById(R.id.Weapon_Type_TextView)
@@ -49,5 +49,8 @@ class CharSheetAdapter(private val dataSet: List<CharSheet>) {
             holder.weaponType.text = dataSet[position].weaponType
             holder.palicoName.text = dataSet[position].palicoName
         }
-    }
+
+        override fun getItemCount(): Int {
+            return dataSet.size
+        }
 }

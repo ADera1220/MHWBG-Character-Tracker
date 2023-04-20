@@ -7,7 +7,7 @@
     android:backgroundTintMode="src_atop">
 
     <FrameLayout
-        android:id="@+id/List_Item_Frame_Layout"
+        android:id="@+id/Character_List_Item_Frame_Layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_item_height"
         android:background="@drawable/layout_border_unchecked"

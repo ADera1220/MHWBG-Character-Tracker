@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 
-class InventoryListFragment: Fragment() {
+class MaterialListFragment: Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,10 +23,9 @@ class InventoryListFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         when ((activity as MainActivity).listType) {
-            "weapon" -> (activity as MainActivity).popWeaponsList()
-            "helm" -> (activity as MainActivity).popHelmList()
-            "chest" -> (activity as MainActivity).popChestList()
-            "legs" -> (activity as MainActivity).popLegsList()
+            "materials" -> (activity as MainActivity).popMaterialsList()
+            "monsters" -> (activity as MainActivity).popMonsterPartsList()
+            "quests" -> (activity as MainActivity).popQuestList()
         }
 
         var inventorySaveButton: View? = getView()?.findViewById(R.id.Inventory_Save_Button)
