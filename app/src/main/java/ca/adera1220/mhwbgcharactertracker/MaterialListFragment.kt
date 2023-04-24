@@ -1,9 +1,12 @@
 package ca.adera1220.mhwbgcharactertracker
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
@@ -22,11 +25,7 @@ class MaterialListFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        when ((activity as MainActivity).listType) {
-            "materials" -> (activity as MainActivity).popMaterialsList()
-            "monsters" -> (activity as MainActivity).popMonsterPartsList()
-            "quests" -> (activity as MainActivity).popQuestList()
-        }
+        (activity as MainActivity).popMaterialList()
 
         var materialSaveButton: View? = getView()?.findViewById(R.id.Material_Save_Button)
 
@@ -38,4 +37,5 @@ class MaterialListFragment: Fragment() {
                 }
         }
     }
+
 }

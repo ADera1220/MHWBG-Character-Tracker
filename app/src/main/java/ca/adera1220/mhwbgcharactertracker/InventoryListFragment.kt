@@ -22,12 +22,7 @@ class InventoryListFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        when ((activity as MainActivity).listType) {
-            "weapon" -> (activity as MainActivity).popWeaponsList()
-            "helm" -> (activity as MainActivity).popHelmList()
-            "chest" -> (activity as MainActivity).popChestList()
-            "legs" -> (activity as MainActivity).popLegsList()
-        }
+        (activity as MainActivity).popInventoryList()
 
         var inventorySaveButton: View? = getView()?.findViewById(R.id.Inventory_Save_Button)
 

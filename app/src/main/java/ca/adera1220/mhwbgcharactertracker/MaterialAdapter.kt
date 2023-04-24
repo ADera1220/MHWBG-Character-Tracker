@@ -20,6 +20,27 @@ class MaterialAdapter (private val dataSet: Map<String, Int>):
             frame = view.findViewById(R.id.Material_List_Item_Frame_Layout)
             itemName = view.findViewById(R.id.Material_Name_TextView)
             quantity = view.findViewById(R.id.Quantity_EditText)
+
+
+            var plusButton: View? = view.findViewById(R.id.Plus_Button)
+            var minusButton: View? = view.findViewById(R.id.Minus_Button)
+            var quantityEditText: EditText? = view.findViewById(R.id.Quantity_EditText)
+
+            plusButton?.setOnClickListener {
+                var itemCount = quantityEditText?.text?.toString()?.toInt()
+                if(itemCount!! > 0) {
+                    itemCount = itemCount?.plus(1)
+                    quantityEditText?.setText(itemCount.toString())
+                }
+            }
+
+            minusButton?.setOnClickListener {
+                var itemCount = quantityEditText?.text?.toString()?.toInt()
+                if(itemCount!! > 0) {
+                    itemCount = itemCount?.minus(1)
+                    quantityEditText?.setText(itemCount.toString())
+                }
+            }
         }
     }
 
