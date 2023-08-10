@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "525005685578",
+    "project_id": "mhw-board-game-char-tracker",
+    "storage_bucket": "mhw-board-game-char-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525005685578:android:16e52f3d93767885ddf7b3",
+        "android_client_info": {
+          "package_name": "ca.adera1220.mhwbgcharactertracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525005685578-har17nu19c9o6e6ft7udnu3cguilk4bj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwNjRi09bssaxR_OCGsvzmyFuby4i6SSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525005685578-har17nu19c9o6e6ft7udnu3cguilk4bj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

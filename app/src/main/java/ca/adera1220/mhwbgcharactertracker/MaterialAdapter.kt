@@ -1,5 +1,6 @@
 package ca.adera1220.mhwbgcharactertracker
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +9,7 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MaterialAdapter (private val dataSet: Map<String, Int>):
+class MaterialAdapter (private val dataSet: MutableMap<String, Int>):
     RecyclerView.Adapter<MaterialAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -28,7 +29,8 @@ class MaterialAdapter (private val dataSet: Map<String, Int>):
 
             plusButton?.setOnClickListener {
                 var itemCount = quantityEditText?.text?.toString()?.toInt()
-                if(itemCount!! > 0) {
+
+                if(itemCount!! >= 0) {
                     itemCount = itemCount?.plus(1)
                     quantityEditText?.setText(itemCount.toString())
                 }
@@ -36,6 +38,7 @@ class MaterialAdapter (private val dataSet: Map<String, Int>):
 
             minusButton?.setOnClickListener {
                 var itemCount = quantityEditText?.text?.toString()?.toInt()
+
                 if(itemCount!! > 0) {
                     itemCount = itemCount?.minus(1)
                     quantityEditText?.setText(itemCount.toString())

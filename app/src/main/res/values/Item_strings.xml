@@ -1,312 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--    Bow Names-->
     <string-array name="bow_names">
-        <item>1Hunter\'s Bow</item>
-        <item>2Hunter\'s Stoutbow</item>
-        <item>2Steel Bow</item>
-        <item>3Alloy Bow</item>
-        <item>3Blazing Bow</item>
-        <item>3Blooming Arch</item>
-        <item>3Diablos Bow</item>
-        <item>3Hunter\'s Proudbow</item>
-        <item>3Kulu Arrow</item>
-        <item>3Pulsar Bow</item>
-        <item>4Anja Arch</item>
-        <item>4Archer\'s Dance</item>
-        <item>4Datura String</item>
-        <item>4Diablos Coilbender</item>
-        <item>4Flying Kadachi Strike</item>
-        <item>4Icesteel Bow</item>
-        <item>4Nergal Whisper</item>
-        <item>5Daora\'s Sagittarii</item>
-        <item>5Doom\'s Shaft</item>
+        <item>1 Hunter\'s Bow</item>
+        <item>2 Hunter\'s Stoutbow</item>
+        <item>2 Steel Bow</item>
+        <item>3 Alloy Bow</item>
+        <item>3 Blazing Bow</item>
+        <item>3 Blooming Arch</item>
+        <item>3 Diablos Bow</item>
+        <item>3 Hunter\'s Proudbow</item>
+        <item>3 Kulu Arrow</item>
+        <item>3 Pulsar Bow</item>
+        <item>4 Anja Arch</item>
+        <item>4 Archer\'s Dance</item>
+        <item>4 Datura String</item>
+        <item>4 Diablos Coilbender</item>
+        <item>4 Flying Kadachi Strike</item>
+        <item>4 Icesteel Bow</item>
+        <item>4 Nergal Whisper</item>
+        <item>5 Daora\'s Sagittarii</item>
+        <item>5 Doom\s Shaft</item>
     </string-array>
 
     <!--    Charge Blade Names-->
     <string-array name="charge_blade_names">
-        <item>1Bone Strongarm</item>
-        <item>2Hard Bone Strongarm</item>
-        <item>2Elite Commission Axe</item>
-        <item>3Chrome Guardian</item>
-        <item>3Diablos Wall</item>
-        <item>3Jagras Strongarm</item>
-        <item>3Mighty Strongarm</item>
-        <item>3Mudslide Blade</item>
-        <item>3Pulsar Strongarm</item>
-        <item>4Daora\'s Casca</item>
-        <item>4Diablos Tyrannis</item>
-        <item>4Jagras Escudo</item>
-        <item>4Jyura Depth</item>
-        <item>4Kadachi Kaina</item>
-        <item>4Nergal Lacerator</item>
-        <item>5Daora\'s Thwartoise</item>
-        <item>5Devistation\'s Thorns</item>
+        <item>1 Bone Strongarm</item>
+        <item>2 Hard Bone Strongarm</item>
+        <item>2 Elite Commission Axe</item>
+        <item>3 Chrome Guardian</item>
+        <item>3 Diablos Wall</item>
+        <item>3 Jagras Strongarm</item>
+        <item>3 Mighty Strongarm</item>
+        <item>3 Mudslide Blade</item>
+        <item>3 Pulsar Strongarm</item>
+        <item>4 Daora\'s Casca</item>
+        <item>4 Diablos Tyrannis</item>
+        <item>4 Jagras Escudo</item>
+        <item>4 Jyura Depth</item>
+        <item>4 Kadachi Kaina</item>
+        <item>4 Nergal Lacerator</item>
+        <item>5 Daora\'s Thwartoise</item>
+        <item>5 Devistation\'s Thorns</item>
     </string-array>
 
     <!--    Dual Blades Names-->
     <string-array name="dual_blades_names">
-        <item>1Bone Hatchets</item>
-        <item>2Dual Slicers</item>
-        <item>2Wild Hatchets</item>
-        <item>3Blazing Hatchets</item>
-        <item>3Chrome Slicers</item>
-        <item>3Diablos Hatchets</item>
-        <item>3Madness Pangas</item>
-        <item>3Pulsar Hatchets</item>
-        <item>3Rending Beaks</item>
-        <item>3Strong Hatchets</item>
-        <item>4Anja Cyclone</item>
-        <item>4Arcanaria</item>
-        <item>4Diablos Clubs</item>
-        <item>4Jyura Hatchets</item>
-        <item>4Kadachi Claws</item>
-        <item>4Nergal Gouge</item>
-        <item>4Twin Nails</item>
-        <item>5Decimation Claws</item>
-        <item>5Fire and Ice</item>
+        <item>1 Bone Hatchets</item>
+        <item>2 Dual Slicers</item>
+        <item>2 Wild Hatchets</item>
+        <item>3 Blazing Hatchets</item>
+        <item>3 Chrome Slicers</item>
+        <item>3 Diablos Hatchets</item>
+        <item>3 Madness Pangas</item>
+        <item>3 Pulsar Hatchets</item>
+        <item>3 Rending Beaks</item>
+        <item>3 Strong Hatchets</item>
+        <item>4 Anja Cyclone</item>
+        <item>4 Arcanaria</item>
+        <item>4 Diablos Clubs</item>
+        <item>4 Jyura Hatchets</item>
+        <item>4 Kadachi Claws</item>
+        <item>4 Nergal Gouge</item>
+        <item>4 Twin Nails</item>
+        <item>5 Decimation Claws</item>
+        <item>5 Fire and Ice</item>
     </string-array>
 
     <!--    Great Sword Names-->
     <string-array name="great_sword_names">
-        <item>1Bone Blade</item>
-        <item>2Bone Slasher</item>
-        <item>2Buster Blade</item>
-        <item>3Blooming Blade</item>
-        <item>3Carapace Buster</item>
-        <item>3Chrome Razor</item>
-        <item>3Flame Blade</item>
-        <item>3Giant Jawblade</item>
-        <item>3Jagras Blade</item>
-        <item>4Barroth Shredder</item>
-        <item>4Datura Blaze</item>
-        <item>4Icesteel Edge</item>
-        <item>4Jagras Hacker</item>
-        <item>4Nergal Judicator</item>
-        <item>4Red Wing</item>
-        <item>5Daora\'s Decimator</item>
-        <item>5Pergation\'s Atrocity</item>
+        <item>1 Bone Blade</item>
+        <item>2 Bone Slasher</item>
+        <item>2 Buster Blade</item>
+        <item>3 Blooming Blade</item>
+        <item>3 Carapace Buster</item>
+        <item>3 Chrome Razor</item>
+        <item>3 Flame Blade</item>
+        <item>3 Giant Jawblade</item>
+        <item>3 Jagras Blade</item>
+        <item>4 Barroth Shredder</item>
+        <item>4 Datura Blaze</item>
+        <item>4 Icesteel Edge</item>
+        <item>4 Jagras Hacker</item>
+        <item>4 Nergal Judicator</item>
+        <item>4 Red Wing</item>
+        <item>5 Daora\'s Decimator</item>
+        <item>5 Pergation\'s Atrocity</item>
     </string-array>
 
     <!--    Gunlance Names-->
     <string-array name="gunlance_names">
-        <item>1Bone Gunlance</item>
-        <item>2Bone Cannon</item>
-        <item>2Steel Gunlance</item>
-        <item>3Carapace Cannon</item>
-        <item>3Chrome Gunlance</item>
-        <item>3Great Bone Gunlance</item>
-        <item>3Jagras Gunlance</item>
-        <item>3Madness Gunlance</item>
-        <item>3Rath Gunlance</item>
-        <item>3Barroth Blaster</item>
-        <item>4Glutton Gunlance</item>
-        <item>4Icesteel Gunlance</item>
-        <item>4Jyura Buster</item>
-        <item>4Nergal Ram</item>
-        <item>4Red Rook</item>
-        <item>5Daora\'s Brigia</item>
-        <item>5Eradication Flame</item>
+        <item>1 Bone Gunlance</item>
+        <item>2 Bone Cannon</item>
+        <item>2 Steel Gunlance</item>
+        <item>3 Carapace Cannon</item>
+        <item>3 Chrome Gunlance</item>
+        <item>3 Great Bone Gunlance</item>
+        <item>3 Jagras Gunlance</item>
+        <item>3 Madness Gunlance</item>
+        <item>3 Rath Gunlance</item>
+        <item>3 Barroth Blaster</item>
+        <item>4 Glutton Gunlance</item>
+        <item>4 Icesteel Gunlance</item>
+        <item>4 Jyura Buster</item>
+        <item>4 Nergal Ram</item>
+        <item>4 Red Rook</item>
+        <item>5 Daora\'s Brigia</item>
+        <item>5 Eradication Flame</item>
     </string-array>
 
     <!--    Hammer Names-->
     <string-array name="hammer_names">
-        <item>1Bone Bludgeon</item>
-        <item>2Fossil Bludgeon</item>
-        <item>2Iron Demon</item>
-        <item>3Blazing Hammer</item>
-        <item>3Blooming Hammer</item>
-        <item>3Carapace Sledge</item>
-        <item>3Diablos Sledge</item>
-        <item>3Grand Rock</item>
-        <item>3Iron Arch Demon</item>
-        <item>3Kulu Beak</item>
-        <item>4Anja Striker</item>
-        <item>4Barroth Breaker</item>
-        <item>4Buon Fiore</item>
-        <item>4Crushing Beak</item>
-        <item>4Diablos Shatterer</item>
-        <item>4Icesteel Hammer</item>
-        <item>4Nergal Crusher</item>
-        <item>5Daora\'s Colossus</item>
-        <item>5Obliteration\'s Footfall</item>
+        <item>1 Bone Bludgeon</item>
+        <item>2 Fossil Bludgeon</item>
+        <item>2 Iron Demon</item>
+        <item>3 Blazing Hammer</item>
+        <item>3 Blooming Hammer</item>
+        <item>3 Carapace Sledge</item>
+        <item>3 Diablos Sledge</item>
+        <item>3 Grand Rock</item>
+        <item>3 Iron Arch Demon</item>
+        <item>3 Kulu Beak</item>
+        <item>4 Anja Striker</item>
+        <item>4 Barroth Breaker</item>
+        <item>4 Buon Fiore</item>
+        <item>4 Crushing Beak</item>
+        <item>4 Diablos Shatterer</item>
+        <item>4 Icesteel Hammer</item>
+        <item>4 Nergal Crusher</item>
+        <item>5 Daora\'s Colossus</item>
+        <item>5 Obliteration\'s Footfall</item>
     </string-array>
 
     <!--    Heavy Bow Gun Names-->
     <string-array name="heavy_bow_gun_names">
-        <item>1Bone Shooter</item>
-        <item>2Heavy Shooter</item>
-        <item>2Steel Assault</item>
-        <item>3Blooming Shooter</item>
-        <item>3Chrome Assault</item>
-        <item>3Diablos Shooter</item>
-        <item>3Jagras Assault</item>
-        <item>3Power Shooter</item>
-        <item>3Pulsar Shooter</item>
-        <item>4Datura Blaster</item>
-        <item>4Dual Threat</item>
-        <item>4Jagras Cannon</item>
-        <item>4Kadachi Lion</item>
-        <item>4Nergal Roar</item>
-        <item>4Teostra\'s Artillery</item>
-        <item>5Destruction\'s Fusillade</item>
-        <item>5Teostra\'s Flames</item>
+        <item>1 Bone Shooter</item>
+        <item>2 Heavy Shooter</item>
+        <item>2 Steel Assault</item>
+        <item>3 Blooming Shooter</item>
+        <item>3 Chrome Assault</item>
+        <item>3 Diablos Shooter</item>
+        <item>3 Jagras Assault</item>
+        <item>3 Power Shooter</item>
+        <item>3 Pulsar Shooter</item>
+        <item>4 Datura Blaster</item>
+        <item>4 Dual Threat</item>
+        <item>4 Jagras Cannon</item>
+        <item>4 Kadachi Lion</item>
+        <item>4 Nergal Roar</item>
+        <item>4 Teostra\'s Artillery</item>
+        <item>5 Destruction\'s Fusillade</item>
+        <item>5 Teostra\'s Flames</item>
     </string-array>
 
     <!--    Hunting Horn Names-->
     <string-array name="hunting_horn_names">
-        <item>1Bone Horn</item>
-        <item>2Great Bagpipe</item>
-        <item>2Hard Bone Horn</item>
-        <item>3Aqua Bagpipe</item>
-        <item>3Blazing Horn</item>
-        <item>3Blooming Horn</item>
-        <item>3Fortissimo</item>
-        <item>3Heavy Bone Horn</item>
-        <item>3Thunder Gaida</item>
-        <item>4Anja Barone</item>
-        <item>4Datura Horn</item>
-        <item>4Lightning Drum</item>
-        <item>4Water Tamtam</item>
-        <item>4Nergal Groove</item>
-        <item>4Teostra\'s Tiple</item>
-        <item>5Desolation\'s Overture</item>
-        <item>5Teostra\'s Orphee</item>
+        <item>1 Bone Horn</item>
+        <item>2 Great Bagpipe</item>
+        <item>2 Hard Bone Horn</item>
+        <item>3 Aqua Bagpipe</item>
+        <item>3 Blazing Horn</item>
+        <item>3 Blooming Horn</item>
+        <item>3 Fortissimo</item>
+        <item>3 Heavy Bone Horn</item>
+        <item>3 Thunder Gaida</item>
+        <item>4 Anja Barone</item>
+        <item>4 Datura Horn</item>
+        <item>4 Lightning Drum</item>
+        <item>4 Water Tamtam</item>
+        <item>4 Nergal Groove</item>
+        <item>4 Teostra\'s Tiple</item>
+        <item>5 Desolation\'s Overture</item>
+        <item>5 Teostra\'s Orphee</item>
     </string-array>
 
     <!--    Insect Glaive Names-->
     <string-array name="insect_glaive_names">
-        <item>1Bone Rod</item>
-        <item>2Hard Bone Rod</item>
-        <item>2Steel Blade</item>
-        <item>3Aerial Magus</item>
-        <item>3Blooming Glaive</item>
-        <item>3Chrome Blade</item>
-        <item>3Diablos Rod</item>
-        <item>3Flame Glaive</item>
-        <item>3Flammenkafer</item>
-        <item>3Kulu Blade</item>
-        <item>4Daora\'s Entom</item>
-        <item>4Datura Blade</item>
-        <item>4Gnashing Flamm.</item>
-        <item>4Nergal Reaper</item>
-        <item>4Rathmaul</item>
-        <item>4Tyrannis Glaive</item>
-        <item>4Ya-Ku Wrath</item>
-        <item>5Catastrophe\'s Light</item>
-        <item>5Daora\'s Tethidine</item>
+        <item>1 Bone Rod</item>
+        <item>2 Hard Bone Rod</item>
+        <item>2 Steel Blade</item>
+        <item>3 Aerial Magus</item>
+        <item>3 Blooming Glaive</item>
+        <item>3 Chrome Blade</item>
+        <item>3 Diablos Rod</item>
+        <item>3 Flame Glaive</item>
+        <item>3 Flammenkafer</item>
+        <item>3 Kulu Blade</item>
+        <item>4 Daora\'s Entom</item>
+        <item>4 Datura Blade</item>
+        <item>4 Gnashing Flamm.</item>
+        <item>4 Nergal Reaper</item>
+        <item>4 Rathmaul</item>
+        <item>4 Tyrannis Glaive</item>
+        <item>4 Ya-Ku Wrath</item>
+        <item>5 Catastrophe\'s Light</item>
+        <item>5 Daora\'s Tethidine</item>
     </string-array>
 
     <!--    Lance Names-->
     <string-array name="lance_names">
-        <item>1Bone Lance</item>
-        <item>2Hard Bone Lance</item>
-        <item>2Steel Lance</item>
-        <item>3Aqua Horn</item>
-        <item>3Carapace Lance</item>
-        <item>3Chrome Lance</item>
-        <item>3Flame Lance</item>
-        <item>3Heavy Bone Lance</item>
-        <item>3Kulu Duda</item>
-        <item>3Thunder Lance</item>
-        <item>4Barroth Stinger</item>
-        <item>4Dancing Duval</item>
-        <item>4Icesteel Spear</item>
-        <item>4Lightning Spire</item>
-        <item>4Nergal Impaler</item>
-        <item>4Red Tail</item>
-        <item>4Water Spike</item>
-        <item>5Daora\'s Fang</item>
-        <item>5Perdition\'s Hand</item>
+        <item>1 Bone Lance</item>
+        <item>2 Hard Bone Lance</item>
+        <item>2 Steel Lance</item>
+        <item>3 Aqua Horn</item>
+        <item>3 Carapace Lance</item>
+        <item>3 Chrome Lance</item>
+        <item>3 Flame Lance</item>
+        <item>3 Heavy Bone Lance</item>
+        <item>3 Kulu Duda</item>
+        <item>3 Thunder Lance</item>
+        <item>4 Barroth Stinger</item>
+        <item>4 Dancing Duval</item>
+        <item>4 Icesteel Spear</item>
+        <item>4 Lightning Spire</item>
+        <item>4 Nergal Impaler</item>
+        <item>4 Red Tail</item>
+        <item>4 Water Spike</item>
+        <item>5 Daora\'s Fang</item>
+        <item>5 Perdition\'s Hand</item>
     </string-array>
 
     <!--    Light Bow Gun Names-->
     <string-array name="light_bow_gun_names">
-        <item>1Hunter\'s Rifle</item>
-        <item>2Hight Chain Blitz</item>
-        <item>2Power Rifle</item>
-        <item>3Carapace Rifle</item>
-        <item>3Cross Blitz</item>
-        <item>3Flame Blitz</item>
-        <item>3Jagras Blitz</item>
-        <item>3Madness Rifle</item>
-        <item>3Sniper Shot</item>
-        <item>4Barroth Shot</item>
-        <item>4Icesteel Wasp</item>
-        <item>4Jagras Fire</item>
-        <item>4Jyura Bullet</item>
-        <item>4Nergal Spitter</item>
-        <item>4Rathbuster</item>
-        <item>5Cataclysm\'s Trigger</item>
-        <item>5Daora\'s Hornet</item>
+        <item>1 Hunter\'s Rifle</item>
+        <item>2 Hight Chain Blitz</item>
+        <item>2 Power Rifle</item>
+        <item>3 Carapace Rifle</item>
+        <item>3 Cross Blitz</item>
+        <item>3 Flame Blitz</item>
+        <item>3 Jagras Blitz</item>
+        <item>3 Madness Rifle</item>
+        <item>3 Sniper Shot</item>
+        <item>4 Barroth Shot</item>
+        <item>4 Icesteel Wasp</item>
+        <item>4 Jagras Fire</item>
+        <item>4 Jyura Bullet</item>
+        <item>4 Nergal Spitter</item>
+        <item>4 Rathbuster</item>
+        <item>5 Cataclysm\'s Trigger</item>
+        <item>5 Daora\'s Hornet</item>
     </string-array>
 
     <!--    Long Sword Names-->
     <string-array name="long_sword_names">
-        <item>1Bone Shotel</item>
-        <item>2Hard Bone Shotel</item>
-        <item>2Iron Grace</item>
-        <item>3Blazing Shotel</item>
-        <item>3Bone Reaper</item>
-        <item>3First Dance</item>
-        <item>3Iron Gospel</item>
-        <item>3Jyura Shotel</item>
-        <item>3Pulsar Shotel</item>
-        <item>3Wyvern Blade "Fall"</item>
-        <item>4Anja Scimitar</item>
-        <item>4Dipterus</item>
-        <item>4Imperial Saber</item>
-        <item>4Kadachi Fang</item>
-        <item>4Last Dance</item>
-        <item>4Nergal Reaver</item>
-        <item>4Wyvern Blade "Blood"</item>
-        <item>5Extermination\'s Edge</item>
-        <item>5Imperial Shimmer</item>
+        <item>1 Bone Shotel</item>
+        <item>2 Hard Bone Shotel</item>
+        <item>2 Iron Grace</item>
+        <item>3 Blazing Shotel</item>
+        <item>3 Bone Reaper</item>
+        <item>3 First Dance</item>
+        <item>3 Iron Gospel</item>
+        <item>3 Jyura Shotel</item>
+        <item>3 Pulsar Shotel</item>
+        <item>3 Wyvern Blade "Fall"</item>
+        <item>4 Anja Scimitar</item>
+        <item>4 Dipterus</item>
+        <item>4 Imperial Saber</item>
+        <item>4 Kadachi Fang</item>
+        <item>4 Last Dance</item>
+        <item>4 Nergal Reaver</item>
+        <item>4 Wyvern Blade "Blood"</item>
+        <item>5 Extermination\'s Edge</item>
+        <item>5 Imperial Shimmer</item>
     </string-array>
 
     <!--    Switch Axe Names-->
     <string-array name="switch_axe_names">
-        <item>1Bone Axe</item>
-        <item>2Bone Smasher</item>
-        <item>2Improved Steel Axe</item>
-        <item>3Carapace Axe</item>
-        <item>3Diablos Axe</item>
-        <item>3Flammenbeil</item>
-        <item>3Perfected Alloy Axe</item>
-        <item>3Power Smasher</item>
-        <item>3Rathalos Axe</item>
-        <item>4Axe Semper Tyrannis</item>
-        <item>4Barroth Grinder</item>
-        <item>4Gnashing Flammenbeil</item>
-        <item>4Nergal Gash</item>
-        <item>4Rathbringer Axe</item>
-        <item>4Teostra\'s Arx</item>
-        <item>5Dying Light</item>
-        <item>5Teostra\'s Castle</item>
+        <item>1 Bone Axe</item>
+        <item>2 Bone Smasher</item>
+        <item>2 Improved Steel Axe</item>
+        <item>3 Carapace Axe</item>
+        <item>3 Diablos Axe</item>
+        <item>3 Flammenbeil</item>
+        <item>3 Perfected Alloy Axe</item>
+        <item>3 Power Smasher</item>
+        <item>3 Rathalos Axe</item>
+        <item>4 Axe Semper Tyrannis</item>
+        <item>4 Barroth Grinder</item>
+        <item>4 Gnashing Flammenbeil</item>
+        <item>4 Nergal Gash</item>
+        <item>4 Rathbringer Axe</item>
+        <item>4 Teostra\'s Arx</item>
+        <item>5 Dying Light</item>
+        <item>5 Teostra\'s Castle</item>
     </string-array>
 
     <!--    Sword &amp; Shield Names-->
     <string-array name="sword_and_shield_names">
-        <item>1Bone Kukri</item>
-        <item>2Chief Kukri</item>
-        <item>2Steel Knife</item>
-        <item>3Blooming Knife</item>
-        <item>3Carapace Edge</item>
-        <item>3Chrome Slicer</item>
-        <item>3Flame Knife</item>
-        <item>3Grand Barong</item>
-        <item>3Jagras Edge</item>
-        <item>4Barroth Club</item>
-        <item>4Datura Blossom</item>
-        <item>4Heat Edge</item>
-        <item>4Jagras Garrotte</item>
-        <item>4Nergal Jack</item>
-        <item>4Teostra\'s Spada</item>
-        <item>5Eradication Vanguard</item>
-        <item>5Teostra\'s Emblem</item>
+        <item>1 Bone Kukri</item>
+        <item>2 Chief Kukri</item>
+        <item>2 Steel Knife</item>
+        <item>3 Blooming Knife</item>
+        <item>3 Carapace Edge</item>
+        <item>3 Chrome Slicer</item>
+        <item>3 Flame Knife</item>
+        <item>3 Grand Barong</item>
+        <item>3 Jagras Edge</item>
+        <item>4 Barroth Club</item>
+        <item>4 Datura Blossom</item>
+        <item>4 Heat Edge</item>
+        <item>4 Jagras Garrotte</item>
+        <item>4 Nergal Jack</item>
+        <item>4 Teostra\'s Spada</item>
+        <item>5 Eradication Vanguard</item>
+        <item>5 Teostra\'s Emblem</item>
     </string-array>
-
 
     <!--    Quests-->
     <string-array name="quest_names">

@@ -25,10 +25,22 @@ class CharListFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as MainActivity).popCharList()
+        (activity as MainActivity).createCharEventListener((activity as MainActivity).db)
+
+        (activity as MainActivity).charSheetAdapter.onCharSheetClick = { charSheet, position ->
+            (activity as MainActivity).alertAction = AlertAction.UPDATE
+            (activity as MainActivity).currentChar = charSheet
+            (activity as MainActivity).currentCharPos = position
+
+            (activity as MainActivity).supportFragmentManager
+                .commit {
+                    replace<CharSheetFragment>(R.id.Fragment_Container)
+                }
+        }
 
         var createNewCharacterButton: View? = getView()?.findViewById(R.id.Character_Create_Button)
-
         createNewCharacterButton?.setOnClickListener {
+            (activity as MainActivity).alertAction = AlertAction.ADD
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {

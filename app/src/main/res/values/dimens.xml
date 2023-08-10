@@ -39,4 +39,5 @@
     <dimen name="char_sheet_image_button_height">140dp</dimen>
     <dimen name="char_sheet_row_height">150dp</dimen>
     <dimen name="char_sheet_frame_width">500dp</dimen>
+    <dimen name="char_sheet_quest_button_width">340dp</dimen>
 </resources>

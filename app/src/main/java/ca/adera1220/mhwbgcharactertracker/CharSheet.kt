@@ -1,6 +1,8 @@
 package ca.adera1220.mhwbgcharactertracker
 
+import android.util.Log
 import com.google.firebase.database.Exclude
+
 
 
 data class CharSheet(
@@ -10,9 +12,9 @@ data class CharSheet(
     val campaignName: String = "",
     val palicoName: String = "",
     val weaponType: String = "",
-    val potionCount: String = "0",
-    val dayCount: String = "1",
-    val weaponList: Map<String, Boolean> = mapOf<String, Boolean>(
+    val potionCount: Int = 0,
+    val dayCount: Int = 0,
+    val bowList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Hunter\'s Bow" to false,
         "2 Hunter\'s Stoutbow" to false,
         "2 Steel Bow" to false,
@@ -31,7 +33,9 @@ data class CharSheet(
         "4 Icesteel Bow" to false,
         "4 Nergal Whisper" to false,
         "5 Daora\'s Sagittarii" to false,
-        "5 Doom\'s Shaft" to false,
+        "5 Doom\'s Shaft" to false
+    ),
+    val chargeBladeList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Strongarm" to false,
         "2 Hard Bone Strongarm" to false,
         "2 Elite Commission Axe" to false,
@@ -48,7 +52,9 @@ data class CharSheet(
         "4 Kadachi Kaina" to false,
         "4 Nergal Lacerator" to false,
         "5 Daora\'s Thwartoise" to false,
-        "5 Devistation\'s Thorns" to false,
+        "5 Devistation\'s Thorns" to false
+    ),
+    val dualBladeList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Hatchets" to false,
         "2 Dual Slicers" to false,
         "2 Wild Hatchets" to false,
@@ -67,7 +73,9 @@ data class CharSheet(
         "4 Nergal Gouge" to false,
         "4 Twin Nails" to false,
         "5 Decimation Claws" to false,
-        "5 Fire and Ice" to false,
+        "5 Fire and Ice" to false
+    ),
+    val greatSwordList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Blade" to false,
         "2 Bone Slasher" to false,
         "2 Buster Blade" to false,
@@ -84,7 +92,9 @@ data class CharSheet(
         "4 Nergal Judicator" to false,
         "4 Red Wing" to false,
         "5 Daora\'s Decimator" to false,
-        "5 Pergation\'s Atrocity" to false,
+        "5 Pergation\'s Atrocity" to false
+    ),
+    val gunlanceList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Gunlance" to false,
         "2 Bone Cannon" to false,
         "2 Steel Gunlance" to false,
@@ -101,7 +111,9 @@ data class CharSheet(
         "4 Nergal Ram" to false,
         "4 Red Rook" to false,
         "5 Daora\'s Brigia" to false,
-        "5 Eradication Flame" to false,
+        "5 Eradication Flame" to false
+    ),
+    val hammerList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Bludgeon" to false,
         "2 Fossil Bludgeon" to false,
         "2 Iron Demon" to false,
@@ -120,7 +132,9 @@ data class CharSheet(
         "4 Icesteel Hammer" to false,
         "4 Nergal Crusher" to false,
         "5 Daora\'s Colossus" to false,
-        "5 Obliteration\'s Footfall" to false,
+        "5 Obliteration\'s Footfall" to false
+    ),
+    val heavyBowGunList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Shooter" to false,
         "2 Heavy Shooter" to false,
         "2 Steel Assault" to false,
@@ -137,7 +151,9 @@ data class CharSheet(
         "4 Nergal Roar" to false,
         "4 Teostra\'s Artillery" to false,
         "5 Destruction\'s Fusillade" to false,
-        "5 Teostra\'s Flames" to false,
+        "5 Teostra\'s Flames" to false
+    ),
+    val huntingHornList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Horn" to false,
         "2 Great Bagpipe" to false,
         "2 Hard Bone Horn" to false,
@@ -154,7 +170,9 @@ data class CharSheet(
         "4 Nergal Groove" to false,
         "4 Teostra\'s Tiple" to false,
         "5 Desolation\'s Overture" to false,
-        "5 Teostra\'s Orphee" to false,
+        "5 Teostra\'s Orphee" to false
+    ),
+    val insectGlaiveList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Rod" to false,
         "2 Hard Bone Rod" to false,
         "2 Steel Blade" to false,
@@ -167,13 +185,15 @@ data class CharSheet(
         "3 Kulu Blade" to false,
         "4 Daora\'s Entom" to false,
         "4 Datura Blade" to false,
-        "4 Gnashing Flamm." to false,
+        "4 Gnashing Flamm" to false,
         "4 Nergal Reaper" to false,
         "4 Rathmaul" to false,
         "4 Tyrannis Glaive" to false,
         "4 Ya-Ku Wrath" to false,
         "5 Catastrophe\'s Light" to false,
-        "5 Daora\'s Tethidine" to false,
+        "5 Daora\'s Tethidine" to false
+    ),
+    val lanceList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Lance" to false,
         "2 Hard Bone Lance" to false,
         "2 Steel Lance" to false,
@@ -192,7 +212,9 @@ data class CharSheet(
         "4 Red Tail" to false,
         "4 Water Spike" to false,
         "5 Daora\'s Fang" to false,
-        "5 Perdition\'s Hand" to false,
+        "5 Perdition\'s Hand" to false
+    ),
+    val lightBowGunList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Hunter\'s Rifle" to false,
         "2 Hight Chain Blitz" to false,
         "2 Power Rifle" to false,
@@ -209,7 +231,9 @@ data class CharSheet(
         "4 Nergal Spitter" to false,
         "4 Rathbuster" to false,
         "5 Cataclysm\'s Trigger" to false,
-        "5 Daora\'s Hornet" to false,
+        "5 Daora\'s Hornet" to false
+    ),
+    val longSwordList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Shotel" to false,
         "2 Hard Bone Shotel" to false,
         "2 Iron Grace" to false,
@@ -228,7 +252,9 @@ data class CharSheet(
         "4 Nergal Reaver" to false,
         "4 Wyvern Blade \"Blood\"" to false,
         "5 Extermination\'s Edge" to false,
-        "5 Imperial Shimmer" to false,
+        "5 Imperial Shimmer" to false
+    ),
+    val switchAxeList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Axe" to false,
         "2 Bone Smasher" to false,
         "2 Improved Steel Axe" to false,
@@ -245,7 +271,9 @@ data class CharSheet(
         "4 Rathbringer Axe" to false,
         "4 Teostra\'s Arx" to false,
         "5 Dying Light" to false,
-        "5 Teostra\'s Castle" to false,
+        "5 Teostra\'s Castle" to false
+    ),
+    val swordShieldList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Bone Kukri" to false,
         "2 Chief Kukri" to false,
         "2 Steel Knife" to false,
@@ -264,7 +292,7 @@ data class CharSheet(
         "5 Eradication Vanguard" to false,
         "5 Teostra\'s Emblem" to false
     ),
-    val helmList: Map<String, Boolean> = mapOf<String, Boolean>(
+    val helmList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "Alloy Helm" to false,
         "Bone Helm" to false,
         "Anja Helm" to false,
@@ -282,7 +310,7 @@ data class CharSheet(
         "Nergigante Helm" to false,
         "Kaiser Crown" to false
     ),
-    val chestList: Map<String, Boolean> = mapOf<String, Boolean>(
+    val chestList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "Alloy Mail" to false,
         "Bone Mail" to false,
         "Anja Mail" to false,
@@ -300,7 +328,7 @@ data class CharSheet(
         "Nergigante Mail" to false,
         "Kaiser Mail" to false
     ),
-    val legsList: Map<String, Boolean> = mapOf<String, Boolean>(
+    val legsList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "Alloy Greaves" to false,
         "Bone Greaves" to false,
         "Anja Greaves" to false,
@@ -318,7 +346,7 @@ data class CharSheet(
         "Nergigante Greaves" to false,
         "Kaiser Greaves" to false
     ),
-    val materialsList: Map<String, Int> = mapOf<String, Int>(
+    val materialsList: MutableMap<String, Int> = mutableMapOf<String, Int>(
         "Anjanath Fang" to 0,
         "Anjanath Nosebone" to 0,
         "Anjanath Pelt" to 0,
@@ -397,7 +425,7 @@ data class CharSheet(
         "Teostra Tail" to 0,
         "Teostra Webbing" to 0
     ),
-    val monsterPartsList: Map<String, Int> = mapOf<String, Int>(
+    val monsterPartsList: MutableMap<String, Int> = mutableMapOf<String, Int>(
         "Ancient Bone" to 0,
         "Aqua Sac" to 0,
         "Bird Wyvern Gem" to 0,
@@ -440,7 +468,7 @@ data class CharSheet(
         "Wingdrake Hide" to 0,
         "Wyvern Gem" to 0
     ),
-    val questList: Map<String, Int> = mapOf<String, Int>(
+    val questList: MutableMap<String, Int> = mutableMapOf<String, Int>(
         "Barroth*" to 0,
         "Barroth**" to 0,
         "Barroth***" to 0,
@@ -484,8 +512,7 @@ data class CharSheet(
         "Teostra**" to 0,
         "Teostra*****" to 0
     )
-) {
-    @Exclude
+){
     fun toMap(): Map<String, Any?> {
         return mapOf(
             "id" to id,
@@ -496,7 +523,20 @@ data class CharSheet(
             "weaponType" to weaponType,
             "potionCount" to potionCount,
             "dayCount" to dayCount,
-            "weaponList" to weaponList,
+            "bowList" to bowList,
+            "chargeBladeList" to chargeBladeList,
+            "dualBladeList" to dualBladeList,
+            "greatSwordList" to greatSwordList,
+            "gunlanceList" to gunlanceList,
+            "hammerList" to hammerList,
+            "heavyBowGunList" to heavyBowGunList,
+            "huntingHornList" to huntingHornList,
+            "insectGlaiveList" to insectGlaiveList,
+            "lanceList" to lanceList,
+            "lightBowGunList" to lightBowGunList,
+            "longSwordList" to longSwordList,
+            "switchAxeList" to switchAxeList,
+            "swordShieldList" to swordShieldList,
             "helmList" to helmList,
             "chestList" to chestList,
             "legsList" to legsList,

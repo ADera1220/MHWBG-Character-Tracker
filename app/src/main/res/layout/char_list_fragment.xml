@@ -10,7 +10,7 @@
         android:id="@+id/Character_List_RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/recycler_view_height"
-        app:layout_constraintBottom_toTopOf="@+id/Inventory_Save_Button"
+        app:layout_constraintBottom_toTopOf="@+id/Character_Create_Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

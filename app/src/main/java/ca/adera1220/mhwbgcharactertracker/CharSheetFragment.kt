@@ -1,9 +1,12 @@
 package ca.adera1220.mhwbgcharactertracker
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Spinner
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
@@ -22,7 +25,9 @@ class CharSheetFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        var currentChar: CharSheet? = null
 
+        // Initialize the buttons for the various lists
         var weaponListButton: View? = getView()?.findViewById(R.id.Weapon_Button)
         var helmListButton: View? = getView()?.findViewById(R.id.Helm_Button)
         var chestListButton: View? = getView()?.findViewById(R.id.Chest_Button)
@@ -31,6 +36,27 @@ class CharSheetFragment: Fragment() {
         var monsterPartsListButton: View? = getView()?.findViewById(R.id.Monster_Parts_Button)
         var questListButton: View? = getView()?.findViewById(R.id.Quests_Button)
         var exitButton: View? = getView()?.findViewById(R.id.Exit_Button)
+        var saveButton: View? = getView()?.findViewById(R.id.Save_Button)
+
+        // Initialize TexViews and Spinners for Editing
+        val charNameTextView: TextView? = getView()?.findViewById(R.id.Char_Name_TextView)
+        val potionCountSpinner: Spinner? = getView()?.findViewById(R.id.Potions_Spinner)
+        val dayCountSpinner: Spinner? = getView()?.findViewById(R.id.Day_Count_Spinner)
+
+        // If the user arrives at this fragment to edit a char sheet
+        if((activity as MainActivity).alertAction == AlertAction.UPDATE) {
+            var charList = (activity as MainActivity).getCharList()
+            for(char in charList) {
+                if(char.id == (activity as MainActivity).currentChar.id) {
+                    currentChar = char
+                }
+            }
+
+            charNameTextView?.text = currentChar?.characterName
+            potionCountSpinner?.setSelection(currentChar?.potionCount!!)
+            dayCountSpinner?.setSelection(currentChar?.dayCount!! - 1)
+
+        }
 
         weaponListButton?.setOnClickListener {
             (activity as MainActivity)
@@ -103,10 +129,22 @@ class CharSheetFragment: Fragment() {
                     replace<CharListFragment>(R.id.Fragment_Container)
                 }
         }
-    }
 
-    // Generates a Random ID that has the time of creation and a random 3 digit Int, to ensure they are unique
-    private fun generateID(): String {
-        return "T" + System.currentTimeMillis().toString() + "C" + Random.nextInt(100, 999)
+        saveButton?.setOnClickListener {
+
+            when((activity as MainActivity).alertAction) {
+                // Id we are creating a new task
+                AlertAction.ADD -> {}
+                // If we are updating an existing task
+                AlertAction.UPDATE -> {}
+            }
+
+            (activity as MainActivity)
+                .supportFragmentManager
+                .commit {
+                    (activity as MainActivity).listType = ""
+                    replace<CharListFragment>(R.id.Fragment_Container)
+                }
+        }
     }
 }

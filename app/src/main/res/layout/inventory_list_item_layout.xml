@@ -4,7 +4,8 @@
     android:layout_width="@dimen/list_item_width"
     android:layout_height="@dimen/list_item_height"
     android:backgroundTint="@color/accent_button_colour"
-    android:backgroundTintMode="src_atop">
+    android:backgroundTintMode="src_atop"
+    android:onClick="onCheckboxClicked">
 
     <FrameLayout
         android:id="@+id/Inventory_List_Item_Frame_Layout"
