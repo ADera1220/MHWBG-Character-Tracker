@@ -1,56 +1,46 @@
 package ca.adera1220.mhwbgcharactertracker
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.*
+import android.widget.EditText
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class CharSheetAdapter(private val dataSet: List<CharSheet>):
-    RecyclerView.Adapter<CharSheetAdapter.ViewHolder>() {
+RecyclerView.Adapter<CharSheetAdapter.ViewHolder>() {
 
-        var onCharSheetClick: ((CharSheet, position: Int) -> Unit)? = null
+    inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+        val charName: TextView
+        val potionCount: EditText
+        val dayCount: EditText
 
-        inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-            val frame: FrameLayout
-            val playerName: TextView
-            val charName: TextView
-            val weaponType: TextView
-            val palicoName: TextView
-            val campaignName: TextView
+        init {
+            charName = view.findViewById(R.id.Char_Name_TextView)
+            potionCount = view.findViewById(R.id.Potion_Count_EditText)
+            dayCount = view.findViewById(R.id.Day_Count_EditText)
 
-            init {
-                frame = view.findViewById(R.id.Character_List_Item_Frame_Layout)
-                playerName = view.findViewById(R.id.Player_Name_TextView)
-                charName = view.findViewById(R.id.Character_Name_TextView)
-                weaponType = view.findViewById(R.id.Weapon_Type_TextView)
-                palicoName = view.findViewById(R.id.Palico_Name_TextView)
-                campaignName = view.findViewById(R.id.Campaign_Name_TextView)
 
-                view.setOnClickListener {
-                    onCharSheetClick?.invoke(dataSet[adapterPosition], adapterPosition)
-                }
-            }
+            Log.i("CHARSHEET", dataSet[position].potionCount.toString())
         }
+    }
 
-        override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-            val view = LayoutInflater
-                .from(viewGroup.context)
-                .inflate(R.layout.character_list_item_layout, viewGroup, false)
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater
+            .from(viewGroup.context)
+            .inflate(R.layout.char_sheet_fragment, viewGroup, false)
 
-            return ViewHolder(view)
-        }
+        return ViewHolder(view)
+    }
 
-        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.charName.text = dataSet[position].characterName
-            holder.playerName.text = dataSet[position].playerName
-            holder.campaignName.text = dataSet[position].campaignName
-            holder.weaponType.text = dataSet[position].weaponType
-            holder.palicoName.text = dataSet[position].palicoName
-        }
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.charName.text = dataSet[position].characterName
+        holder.potionCount.setText(dataSet[position].potionCount)
+        holder.dayCount.setText(dataSet[position].dayCount)
+    }
 
-        override fun getItemCount(): Int {
-            return dataSet.size
-        }
+    override fun getItemCount(): Int {
+        return dataSet.size
+    }
 }

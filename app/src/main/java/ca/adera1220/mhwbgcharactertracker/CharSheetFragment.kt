@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -38,10 +39,10 @@ class CharSheetFragment: Fragment() {
         var exitButton: View? = getView()?.findViewById(R.id.Exit_Button)
         var saveButton: View? = getView()?.findViewById(R.id.Save_Button)
 
-        // Initialize TexViews and Spinners for Editing
+        // Initialize TexViews and EditTexts for Editing
         val charNameTextView: TextView? = getView()?.findViewById(R.id.Char_Name_TextView)
-        val potionCountSpinner: Spinner? = getView()?.findViewById(R.id.Potions_Spinner)
-        val dayCountSpinner: Spinner? = getView()?.findViewById(R.id.Day_Count_Spinner)
+        val potionEditText: EditText? = getView()?.findViewById(R.id.Potion_Count_EditText)
+        val dayCountEditText: EditText? = getView()?.findViewById(R.id.Day_Count_EditText)
 
         // If the user arrives at this fragment to edit a char sheet
         if((activity as MainActivity).alertAction == AlertAction.UPDATE) {
@@ -53,9 +54,8 @@ class CharSheetFragment: Fragment() {
             }
 
             charNameTextView?.text = currentChar?.characterName
-            potionCountSpinner?.setSelection(currentChar?.potionCount!!)
-            dayCountSpinner?.setSelection(currentChar?.dayCount!! - 1)
-
+            potionEditText?.setText(currentChar?.potionCount.toString())
+            dayCountEditText?.setText(currentChar?.dayCount.toString())
         }
 
         weaponListButton?.setOnClickListener {
@@ -132,13 +132,38 @@ class CharSheetFragment: Fragment() {
 
         saveButton?.setOnClickListener {
 
-            when((activity as MainActivity).alertAction) {
-                // Id we are creating a new task
-                AlertAction.ADD -> {}
-                // If we are updating an existing task
-                AlertAction.UPDATE -> {}
-            }
+            var newCharSheet: CharSheet? = CharSheet(
+                currentChar?.id!!,
+                currentChar?.playerName!!,
+                currentChar?.characterName!!,
+                currentChar?.campaignName!!,
+                currentChar?.palicoName!!,
+                currentChar?.weaponType!!,
+                potionEditText?.text.toString().toInt(),
+                dayCountEditText?.text.toString().toInt(),
+                currentChar?.bowList!!,
+                currentChar?.chargeBladeList!!,
+                currentChar?.dualBladeList!!,
+                currentChar?.greatSwordList!!,
+                currentChar?.gunlanceList!!,
+                currentChar?.hammerList!!,
+                currentChar?.heavyBowGunList!!,
+                currentChar?.huntingHornList!!,
+                currentChar?.insectGlaiveList!!,
+                currentChar?.lanceList!!,
+                currentChar?.lightBowGunList!!,
+                currentChar?.longSwordList!!,
+                currentChar?.switchAxeList!!,
+                currentChar?.swordShieldList!!,
+                currentChar?.helmList!!,
+                currentChar?.chestList!!,
+                currentChar?.legsList!!,
+                currentChar?.materialsList!!,
+                currentChar?.monsterPartsList!!,
+                currentChar?.questList!!
+            )
 
+            (activity as MainActivity).updateTask(newCharSheet)
             (activity as MainActivity)
                 .supportFragmentManager
                 .commit {

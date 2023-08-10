@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.TextView
@@ -15,35 +16,16 @@ class MaterialAdapter (private val dataSet: MutableMap<String, Int>):
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val frame: FrameLayout
         val itemName: TextView
-        val quantity: EditText
+        val quantityEditText: EditText
+        val plusButton: Button
+        val minusButton: Button
 
         init {
             frame = view.findViewById(R.id.Material_List_Item_Frame_Layout)
             itemName = view.findViewById(R.id.Material_Name_TextView)
-            quantity = view.findViewById(R.id.Quantity_EditText)
-
-
-            var plusButton: View? = view.findViewById(R.id.Plus_Button)
-            var minusButton: View? = view.findViewById(R.id.Minus_Button)
-            var quantityEditText: EditText? = view.findViewById(R.id.Quantity_EditText)
-
-            plusButton?.setOnClickListener {
-                var itemCount = quantityEditText?.text?.toString()?.toInt()
-
-                if(itemCount!! >= 0) {
-                    itemCount = itemCount?.plus(1)
-                    quantityEditText?.setText(itemCount.toString())
-                }
-            }
-
-            minusButton?.setOnClickListener {
-                var itemCount = quantityEditText?.text?.toString()?.toInt()
-
-                if(itemCount!! > 0) {
-                    itemCount = itemCount?.minus(1)
-                    quantityEditText?.setText(itemCount.toString())
-                }
-            }
+            quantityEditText = view.findViewById(R.id.Quantity_EditText)
+            plusButton = view.findViewById(R.id.Plus_Button)
+            minusButton = view.findViewById(R.id.Minus_Button)
         }
     }
 
@@ -59,8 +41,38 @@ class MaterialAdapter (private val dataSet: MutableMap<String, Int>):
         var names: List<String> = dataSet.keys.toList()
         var quantity: List<Int> = dataSet.values.toList()
 
+        holder.plusButton.setOnClickListener {
+            var itemCount = holder.quantityEditText.text.toString().toInt()
+
+            if(itemCount >= 0) {
+                itemCount = itemCount.plus(1)
+                for (item in dataSet) {
+                    if(item.key == holder.itemName.text) {
+                        dataSet[item.key] = itemCount
+                        holder.quantityEditText.setText(itemCount.toString())
+                    }
+                }
+            }
+        }
+
+        holder.minusButton.setOnClickListener {
+            var itemCount = holder.quantityEditText.text.toString().toInt()
+
+            if(itemCount > 0) {
+                itemCount = itemCount.minus(1)
+                for (item in dataSet) {
+                    if(item.key == holder.itemName.text) {
+                        dataSet[item.key] = itemCount
+                        holder.quantityEditText.setText(itemCount.toString())
+                    }
+                }
+            } else {
+                holder.quantityEditText.setText("0")
+            }
+        }
+
         holder.itemName.text = names[position]
-        holder.quantity.setText(quantity[position].toString())
+        holder.quantityEditText.setText(quantity[position].toString())
     }
 
     override fun getItemCount(): Int {

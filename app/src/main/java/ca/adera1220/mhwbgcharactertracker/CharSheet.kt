@@ -12,8 +12,8 @@ data class CharSheet(
     val campaignName: String = "",
     val palicoName: String = "",
     val weaponType: String = "",
-    val potionCount: Int = 0,
-    val dayCount: Int = 0,
+    var potionCount: Int = 0,
+    var dayCount: Int = 0,
     val bowList: MutableMap<String, Boolean> = mutableMapOf<String, Boolean>(
         "1 Hunter\'s Bow" to false,
         "2 Hunter\'s Stoutbow" to false,

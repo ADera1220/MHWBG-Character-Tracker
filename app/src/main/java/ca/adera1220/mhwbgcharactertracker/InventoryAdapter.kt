@@ -21,8 +21,6 @@ class InventoryAdapter(private val dataSet: MutableMap<String, Boolean>):
               frame = view.findViewById(R.id.Inventory_List_Item_Frame_Layout)
               itemName = view.findViewById(R.id.item_Name_TextView)
               inInventory = view.findViewById(R.id.In_Inventory_CheckBox)
-
-
           }
         }
 
